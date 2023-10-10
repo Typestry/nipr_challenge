@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react"
 import { describe, expect, it, vi } from "vitest"
 import { Banner } from "./Banner"
+import userEvent from "@testing-library/user-event"
 
 describe("Banner", () => {
   it("renders", () => {
@@ -27,7 +28,7 @@ describe("Banner", () => {
     expect(link).toBeInTheDocument()
   })
 
-  it("invokes onCTAClick when the button is clicked", () => {
+  it("invokes onCTAClick when the button is clicked", async () => {
     // Arrange
     const buttonText = "Hello World"
     const linkText = "Link Text"
@@ -45,7 +46,7 @@ describe("Banner", () => {
     )
 
     const button = screen.getByText(buttonText)
-    button.click()
+    await userEvent.click(button)
 
     // Assert
     expect(onCTAClick).toHaveBeenCalled()
