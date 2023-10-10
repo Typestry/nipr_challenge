@@ -27,6 +27,7 @@
     "baseUrl": "./",
     "types": ["vite-plugin-svgr/client"]
   },
+  "include": ["src/**/*", ".storybook/**/*"],
   "exclude": [
     "node_modules",
   ],

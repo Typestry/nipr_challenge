@@ -1,6 +1,7 @@
 import { defineConfig } from "vite"
 import reactPlugin from "@vitejs/plugin-react"
 import svgr from "vite-plugin-svgr"
+import tsconfigPaths from "vite-tsconfig-paths"
 
 export default defineConfig({
   test: {
@@ -14,5 +15,9 @@ export default defineConfig({
     port: 5173,
     host: "0.0.0.0",
   },
-  plugins: [reactPlugin(), svgr({ svgrOptions: { icon: true } })],
+  plugins: [
+    reactPlugin(),
+    svgr({ svgrOptions: { icon: true } }),
+    tsconfigPaths(),
+  ],
 })

@@ -24,10 +24,10 @@
     "react-dom": "^18.2.0",
     "react-feather": "^2.0.10",
     "react-helmet": "^6.1.0",
+    "react-query": "^3.39.3",
     "react-router": "^6.15.0",
     "react-router-dom": "^6.15.0",
-    "typescript": "^5.2.2",
-    "vite-plugin-svgr": "^4.0.0"
+    "typescript": "^5.2.2"
   },
   "devDependencies": {
     "@playwright/test": "^1.37.1",
@@ -72,6 +72,8 @@
     "tailwindcss": "^3.3.3",
     "ts-node": "^10.9.1",
     "vite": "^4.4.9",
+    "vite-plugin-svgr": "^4.0.0",
+    "vite-tsconfig-paths": "^4.2.1",
     "vitest": "^0.34.4"
   }
 }
